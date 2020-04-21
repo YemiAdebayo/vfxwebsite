@@ -1,0 +1,1 @@
+web: gunicorn vfxwebsite.wsgi --log-file -

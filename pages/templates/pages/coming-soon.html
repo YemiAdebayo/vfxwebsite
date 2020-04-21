@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Site Under Construction | Virtual FX</title>
+    <script src="https://kit.fontawesome.com/19353213c2.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css?family=Montez|Playfair+Display+SC:400,700,900,|Roboto:,300,400,500,700,900"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/coming-soon.css' %}">
+</head>
+
+<body>
+    <main class="p-0">
+        <article class="p-3">
+            <a href="#" class="mr-auto logo py-2 px-2 rounded-lg m-2">
+                <img src="{% static 'img/logo.jpg'%}" alt="" width="55" class="rounded-lg border p-1">
+            </a>
+            <h1 class="text-white py-2 text-center">
+                Coming Soon
+            </h1>
+            <p class="text-white text-center">
+                Welcome, our website is currently undergoing construction.<br>We will be online soon to continue serving
+                you better.<br>Thank you for your patience!
+            </p>
+            <div class="time-to-launch row py-3">
+                <div>
+                    <div>
+                        <h3 id="days" class="text-center bg-white rounded-circle p-3 p-md-4 m-0">30</h3>
+                    </div>
+                    <p class="text-center text-white pt-2">Days</p>
+                </div>
+                <div class="mx-2">
+                    <div>
+                        <h3 id="hours" class="text-center bg-white rounded-circle p-3 p-md-4 m-0">06</h3>
+                    </div>
+                    <p class="text-center text-white pt-2">Hours</p>
+                </div>
+                <div class="mr-2">
+                    <div>
+                        <h3 id="minutes" class="text-center bg-white rounded-circle p-3 p-md-4 m-0">18</h3>
+                    </div>
+                    <p class="text-center text-white pt-2">Mins.</p>
+                </div>
+                <div class="">
+                    <div>
+                        <h3 id="seconds" class="text-center bg-white rounded-circle p-3 p-md-4 m-0">28</h3>
+                    </div>
+                    <p class="text-center text-white pt-2">Secs</p>
+                </div>
+            </div>
+            <a class="blue my-1 waves-effect" href="mailto: care@brilliant.ng">
+                SEND US EMAIL
+            </a>
+            <h4 class="pt-3 text-white">
+                Find Us On Social Media
+            </h4>
+            <div class="row">
+                <a href="#" class="text-white" style="font-size: 1.3rem;">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="text-white mx-3" style="font-size: 1.3rem;">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-white" style="font-size: 1.3rem;">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script type="module" src="{% static 'js/coming-soon.js' %}"></script>
+</body>
+
+</html>

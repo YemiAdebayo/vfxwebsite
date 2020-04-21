@@ -1,0 +1,135 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block extrametatags %}
+
+<!-- Primary Meta Tags -->
+<title>Register To Become A Master of CG Animations | VFX Academy</title>
+<meta name="title" content="Register To Become A Master of CG Animations | VFX Academy">
+<meta name="description"
+    content="Learn CG Animations from world class experts to jumpstart your career and take the movie industry by storm | Learn With VFX Academy">
+<meta name="keywords"
+    content="CG Animation School, CG Animation Academy, CG Animation Training in Nigeria, CG Animation Professional courses, Learn CG Animation from Experts">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.vfxacademy.com/courses/cg-animation">
+<meta property="og:title" content="Register To Become A Master of CG Animations | VFX Academy">
+<meta property="og:description"
+    content="Learn CG Animations from world class experts to jumpstart your career and take the movie industry by storm | Learn With VFX Academy">
+<meta property="og:image" content="https://vfxacademy.com/static/img/the_avengers.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.vfxacademy.com/courses/cg-animation">
+<meta property="twitter:title" content="Register To Become A Master of CG Animations | VFX Academy">
+<meta property="twitter:description"
+    content="Learn CG Animations from world class experts to jumpstart your career and take the movie industry by storm | Learn With VFX Academy">
+<meta property="twitter:image" content="https://vfxacademy.com/static/img/the_avengers.jpg">
+{% endblock %}
+
+{% block extrahead %}
+<link rel="canonical" href="https://www.vfxacademy.com/register" />
+<link rel="preload" href="{% static 'css/register.css' %}" as="style" />
+<link rel=" stylesheet" href="{% static 'css/register.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section class=" first-section row col-12 p-0 m-0">
+    <div class="col-md-1 d-none d-md-block px-3 bg-dark">
+    </div>
+    <div class="p-0 row col-12 col-md-8 my-0 mx-auto">
+        <div class="p-0 col-12">
+            <form class="registration-form shadow col-12 bg-grey-dark m-0 pt-0 pb-4 px-0 rounded-lg"
+                action="{% url 'register' %}" method="POST" novalidate id="registration-form">
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-dismissible fade show alert-primary paragraph my-0 py-3"
+                    style="font-weight: 400;">
+                    {{ message}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% csrf_token %}
+                <fieldset class="py-4 px-0">
+                    <div class="form-row col-12 text-center py-4 col-md-8 mx-auto">
+                        <div class="form-group col-md-10 mb-0">
+                            <h1 class="text-white" style="font-size: 1.7em;">
+                                <span class="pr-2">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                </span>
+                                REGISTER NOW
+                            </h1>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="py-4 px-0">
+                    <div class="form-row col-12 col-md-8 mx-auto">
+                        <div class="form-group col-md-10 mb-0">
+                            {{ form.first_name|as_crispy_field }}
+                        </div>
+                        <div class="form-group col-md-10 mb-0">
+                            {{ form.last_name|as_crispy_field }}
+                        </div>
+                        <div class="form-group col-md-10 mb-0">
+                            {{ form.phone_number|as_crispy_field }}
+                        </div>
+                        <div class="form-group col-md-10 mb-0">
+                            {{ form.email|as_crispy_field }}
+                        </div>
+                        <div class="form-group col-md-10 mb-0">
+                            {{ form.course|as_crispy_field }}
+                        </div>
+                        <div class="form-group col-md-10 mb-0 row px-1 mx-0">
+                            <input type="submit" value="SUBMIT FORM" name="Submit" class="submit-button blue ml-auto">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-3 px-1 bg-dark py-2">
+        <div class="bg-white col-12 rounded-lg py-4 my-0 ">
+            <h5 class="text-light-blue p-0 ">
+                <span class="pr-2 text-light-blue">
+                    <i class="fas fa-info-circle"></i>
+                </span>
+                EXPLORE OUR COURSES
+            </h5>
+            <p class="paragraph text-light-blue">
+                Explore all our world class courses in CG Animation, Visual Effects and Film Making to
+                determine which is best for you. Use the links
+                below:
+            </p>
+            <div class="list-group">
+                <a href="{% url 'cg-animation' %}" class="list-group-item list-group-item-action text-light-blue">
+                    <span class="pr-2">
+                        <i class="fas fa-external-link-square-alt"></i>
+                    </span>
+                    CG ANIMATION
+                </a>
+                <a href="{% url 'visual-effects' %}" class="list-group-item list-group-item-action text-light-blue">
+                    <span class="pr-2">
+                        <i class="fas fa-external-link-square-alt"></i>
+                    </span>
+                    VISUAL EFFECTS
+                </a>
+                <a href="{% url 'film-making' %}" class="list-group-item list-group-item-action text-light-blue">
+                    <span class="pr-2">
+                        <i class="fas fa-external-link-square-alt"></i>
+                    </span>
+                    FILM MAKING
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extrascripts %}
+<script type="module" src="{% static 'js/register.js' %}"></script>
+{% endblock %}

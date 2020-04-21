@@ -1,0 +1,135 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: .05em;
+}
+
+.first-section {
+    background: #151616;
+}
+
+.first-section>div {
+    background: #000;
+}
+
+.first-section img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.paragraph {
+    line-height: 170%;
+    font-weight: 300;
+    font-size: .95em;
+    letter-spacing: .04em;
+}
+
+.border-left,
+.border-right {
+    border-width: .7px !important;
+    border-color: #272727 !important;
+}
+
+.border-bottom {
+    border-width: 1px !important;
+}
+
+.shadow {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15) !important;
+}
+
+/* ul.custom-list-style {
+    padding: 0;
+} */
+
+ul.custom-list-style>li {
+    position: relative;
+    list-style-type: none;
+    font-size: .92em;
+    font-weight: 300;
+    letter-spacing: .04em;
+    line-height: 220%;
+}
+
+ul.custom-list-style>li::before {
+    content: "";
+    width: .6em;
+    height: .6em;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    top: 1em;
+    left: -1.3em;
+    transform: translate(0, -50%);
+    border: 1px solid #009ed2;
+    background-image: linear-gradient(-190deg, #009ed2 0%, #2abdbf 100%);
+}
+
+.text-light-blue {
+    color: rgba(3, 27, 78, .95);
+}
+
+.blue,
+.aqua-gradient,
+.purple-gradient,
+.purple-red-gradient {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12) !important;
+    color: #fff;
+    border: none;
+    padding: .8rem 1.2rem;
+    border-radius: 10em;
+    transition: .5s ease;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.blue {
+    background-color: #007bff;
+}
+
+.purple-gradient {
+    background: linear-gradient(40deg, #ff6ec4, #7873f5);
+}
+
+.aqua-gradient {
+    background: linear-gradient(40deg, #2096ff, #05ffa3);
+}
+
+.purple-red-gradient {
+    background: linear-gradient(134deg, #3023ae 0%, #c86dd7 100%);
+}
+
+.blue:hover,
+.purple-gradient:active,
+.purple-gradient:hover,
+.aqua-gradient:hover,
+.aqua-gradient:active .blue:active {
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .16), 0 5px 10px 0 rgba(0, 0, 0, .12) !important;
+    color: #fff;
+    text-decoration: none;
+}
+
+a.about-us.active {
+    background-color: #3A4152;
+    opacity: 1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+}
+
+a.about-us.active:hover {
+    opacity: .8;
+}
+
+@media screen and (max-width: 540px) {
+    .first-section img {
+        min-height: 225px;
+    }
+
+    .paragraph {
+        font-size: .94em;
+    }
+}

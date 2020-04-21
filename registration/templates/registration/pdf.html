@@ -1,0 +1,117 @@
+<!doctype html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Report</title>
+    <style type="text/css">
+        @page {
+            size: A4;
+            margin: 1cm;
+            background: #000000;
+        }
+
+        .table {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 5px;
+
+        }
+
+        .table th,
+        .table td {
+            padding: 5px;
+            padding-left: 0;
+            vertical-align: top;
+            border-top: 1px solid #1f385c;
+            border-bottom: 1px solid #1f385c;
+            text-align: left;
+            font-weight: bold;
+            color: #1f385c;
+            font-size: 1.1em;
+        }
+
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #1f385c;
+        }
+
+        /* .table tbody+tbody {
+            border-top: 2px solid #1f385c;
+        } */
+
+        .list-group {
+            display: block;
+            width: 100%;
+            list-style: none;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .list-group p {
+            width: 100%;
+            list-style: none;
+            font-size: 1.1em;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            color: #99d5ff;
+            background-color: #1F385C;
+            padding-top: 2em;
+            padding-bottom: 2em;
+            margin-top: auto;
+            margin-bottom: auto;
+            background-image: url("{% static 'img/vfx-logo.jpg' %}");
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="list-group">
+                <h1>
+                    VFX ACADEMY
+                </h1>
+                <h3 style="color: #1f385c;">
+                    New Registration Notification
+                </h3>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>DATA TYPE</th>
+                    <th>VALUE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>First Name:</td>
+                    <td>{{ first_name }}</td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td>{{ last_name }}</td>
+                </tr>
+                <tr>
+                    <td>Phone Number:</td>
+                    <td>{{ phone_number }}</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>{{ email }}</td>
+                </tr>
+                <tr>
+                    <td>Course:</td>
+                    <td>{{ course }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
